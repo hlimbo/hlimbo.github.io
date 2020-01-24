@@ -42,3 +42,15 @@
   width: 100% !important; 
   height: 50% !important;
 }
+
+.show-content { 
+  visibility: visible;
+}
+
+.hide-content {
+  visibility: hidden;
+}
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}

@@ -8,10 +8,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "animate.css": "^3.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "react-unity-webgl": "^7.1.10"
+    "react-unity-webgl": "^7.1.10",
+    "scroll-into-view": "^1.14.1",
+    "typeface-roboto": "0.0.75"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0"
+    "file-loader": "^5.0.2",
+    "gh-pages": "^2.2.0",
+    "ttf-loader": "^1.0.2"
   }
 }
