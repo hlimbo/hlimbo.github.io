@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+/* See https://github.com/elraccoone/react-unity-webgl/issues/47 */
+/* This dynamically resizes the Unity Game view canvas */
+.game-container canvas {
+  width: 100% !important; 
+  height: 50% !important;
+}
