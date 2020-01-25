@@ -102,7 +102,7 @@ function IntroCard() {
   });
 
   return (
-    <Container maxWidth="sm" align='center'>
+    <Container maxWidth="sm" align='center' id="about_me">
       <Grid container spacing={2}>
         <Grid item>
           <Typography variant="h2">Hi I'm...</Typography>
@@ -134,11 +134,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <HomePage>
-          <IntroCard/>
-        </HomePage>
-      </div>
+      <HomePage>
+        <IntroCard/>
+      </HomePage>
     );
   }
 }
