@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     height: "35px", 
     objectFit: "cover", 
     position: "relative", 
-    left: "20%"
+    left: "45%"
   },
   captionOffset: {
     position: "relative", left: "5%"
@@ -86,22 +86,22 @@ const styles = {
 }
 
 
-function ShadowOverlay(props) {
+function ShadowOverlay({date, projectName, imagePath}) {
   const classes = useStyles();
   return (
     <CardContent className={classes.overlay}>
       <div className={classes.captionContent}>
-        <Typography className={classes.captionOffset}>
-          Sept. 2017
-        </Typography>
         <Grid container>
-          <Typography variant="p" className={classes.captionOffset}>
-            MathNinja
+          <Typography className={classes.captionOffset}>
+            {date}
           </Typography>
           <Avatar alt="Unity" 
                   src="content/MathNinja_Release/TemplateData/progressLogo.Dark.png" 
                   className={classes.captionLogo}/>
         </Grid>
+        <Typography variant="h5" className={classes.captionOffset}>
+          {projectName}
+        </Typography>
       </div>
     </CardContent>
   );
@@ -111,67 +111,70 @@ function ContentLayout() {
   const classes = useStyles();
 
   return(
-    <Grid container justify="center" className={classes.root} spacing={2}>
-      <Grid item>
-        <Card style={styles.card}>
-          <CardMedia image="images/MathNinjaPreview.PNG" style={styles.media} className="meeee"/>
-          <div style={styles.overlay}>
-              this text should overlay the image
-          </div>
-        </Card>
-      </Grid>
+    <Grid container justify="center" className={classes.root} spacing={2} style={{marginTop: "10px", marginBottom: "10px"}}>
       <Grid item>
         <Link href="https://google.com">
           <Card className={classes.size250px}>
-            <CardMedia component="a"
-                      href="https://google.com"  
+            <CardMedia component="img"
                       image="images/MathNinjaPreview.PNG"
                       className={classes.imagePreviewSize}/>
-            <ShadowOverlay/>
+            <ShadowOverlay date="Sept. 2017"
+                           projectName="MathNinja"/>
           </Card>
         </Link>
       </Grid>
       <Grid item>
         <Link href="https://google.com">
           <Card className={classes.size250px}>
-            <CardMedia component="a"
-                      href="https://google.com"  
-                      image="images/MathNinjaPreview.PNG"
+            <CardMedia component="img"
+                      image="images/EdgeLordPreview2.PNG"
                       className={classes.imagePreviewSize}/>
-            <ShadowOverlay/>
+            <ShadowOverlay date="Sept. 2017"
+                           projectName="EdgeLord"/>
           </Card>
         </Link>
       </Grid>
       <Grid item>
         <Link href="https://google.com">
           <Card className={classes.size250px}>
-            <CardMedia component="a"
-                      href="https://google.com"  
-                      image="images/MathNinjaPreview.PNG"
+            <CardMedia component="img"
+                      image="images/StarChaserPreview.PNG"
                       className={classes.imagePreviewSize}/>
-            <ShadowOverlay/>
+            <ShadowOverlay date="Sept. 2017"
+                           projectName="StarChaser"/>
           </Card>
         </Link>
       </Grid>
       <Grid item>
         <Link href="https://google.com">
           <Card className={classes.size250px}>
-            <CardMedia component="a"
-                      href="https://google.com"  
-                      image="images/MathNinjaPreview.PNG"
+            <CardMedia component="img"
+                      image="images/HydroHuntersPreview7.PNG"
                       className={classes.imagePreviewSize}/>
-            <ShadowOverlay/>
+            <ShadowOverlay date="Sept. 2017"
+                           projectName="Hydro Hunters"/>
           </Card>
         </Link>
       </Grid>
       <Grid item>
         <Link href="https://google.com">
           <Card className={classes.size250px}>
-            <CardMedia component="a"
-                      href="https://google.com"  
-                      image="images/MathNinjaPreview.PNG"
+            <CardMedia component="img"
+                      image="images/ShovelBallPreview6.PNG"
                       className={classes.imagePreviewSize}/>
-            <ShadowOverlay/>
+            <ShadowOverlay date="Sept. 2017"
+                           projectName="Shovel Ball"/>
+          </Card>
+        </Link>
+      </Grid>
+      <Grid item>
+        <Link href="https://google.com">
+          <Card className={classes.size250px}>
+            <CardMedia component="img"
+                      image="images/SpookySpoilsPreview3.PNG"
+                      className={classes.imagePreviewSize}/>
+            <ShadowOverlay date="April 2016"
+                           projectName="Spooky Spoils"/>
           </Card>
         </Link>
       </Grid>

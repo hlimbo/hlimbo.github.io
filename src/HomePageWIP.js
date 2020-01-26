@@ -20,13 +20,27 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from '@material-ui/core/Link';
+import BottomNavigaton from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import RestoreIcon from '@material-ui/icons/Restore';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import ListAltIcon from '@material-ui/icons/ListAlt';
+
+
+
 
 // credits: https://gist.github.com/gre/1650294
 const easeOutQuad = t => t*(2-t);
 
-function scrollLinearlyById(id) {
+function scrollLinearlyById(id, align={ align: { top: 0.5, left: 0.5 } }) {
   scrollIntoView(
-    document.getElementById(id)
+    document.getElementById(id),
+    align
   );
 }
 
@@ -68,11 +82,30 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+function LabelBottomNavigation() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState('resume');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <BottomNavigaton value={value} onChange={handleChange} id="bottomFooter" style={{width: '100%', position: 'fixed', bottom: 0, minHeight: "40px", maxHeight:"50px", boxShadow: "0px 0 10px rgba(0, 0, 0, 0.5)"}}>
+      <BottomNavigationAction label="Resume" value="resume" icon={<ListAltIcon />} />
+      <BottomNavigationAction label="LinkedIn" value="linkedin" icon={<LinkedInIcon />} />
+      <BottomNavigationAction label="Email" value="email" icon={<EmailIcon />} />
+      <BottomNavigationAction label="Github" value="github" icon={<GitHubIcon />} />
+  </BottomNavigaton>
+  );
+}
+
+
 let scrollEventAdded = false;
 function HomePage(props) {
   // value here serves as the index for the tabs
   const [value, setValue] = React.useState(0);
-  const classes = makeStyles();
+  //const classes = makeStyles();
   React.useEffect(() => {
     if(!scrollEventAdded) {
       scrollEventAdded = true;
@@ -80,12 +113,22 @@ function HomePage(props) {
         const aboutMe = document.querySelector("#about_me");
         const projects = document.querySelector("#projects");
         const aboutMeBoundBox = aboutMe.getBoundingClientRect();
-        const projectsBoundBox = projects.getBoundingClientRect();
+        let projectsBoundBox = projects.getBoundingClientRect();
         if(isInViewportView(aboutMeBoundBox)) {
           setValue(0);
         } else if(isInViewportView(projectsBoundBox)) {
           setValue(1);
         }
+
+        // if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        //   console.log("We've reached the bottom of the screen");
+        //   const bottomFooter = document.querySelector("#bottomFooter");
+        //   // old style: {width: '100%', position: 'fixed', bottom: 0}
+        //   bottomFooter.setAttribute("style", "width:100%; position:fixed; bottom: 0; display:inline-block; marginBottom:50px");
+        // } else {
+        //   const bottomFooter = document.querySelector("#bottomFooter");
+        //   bottomFooter.setAttribute("style", "width:100%; position:fixed; bottom:0");
+        // }
       });
     }
   });
@@ -102,7 +145,12 @@ function HomePage(props) {
                onClick={() => { scrollLinearlyById("about_me"); setValue(0); }}/>
           <Tab label="Projects" 
                disableRipple 
-               onClick={ () => { scrollLinearlyById("projects"); setValue(1); } }/>
+               onClick={ () => { scrollLinearlyById("projects",
+               {      
+                 align: {
+                  top: 0.08,
+                  left: 0.5
+              }}); setValue(1); } }/>
         </Tabs>
       </AppBar>
       <br/>
@@ -112,7 +160,7 @@ function HomePage(props) {
         <br/>
         <Container maxWidth="md">
           <Typography>
-            I got my first exposure to programming at my high school's AP Comp Sci Course and since then I have gained a deep interest in building software to entertain and help people. I'm known to be a jack of all trades due to my breadth of knowledge of various programming languages such as:
+            I got my first exposure to programming at my high school's AP Comp Sci Course and since then I have gained a deep interest in building software to entertain and help people. I graduated from University of California, Irvine with a Bachelor's Degree in Computer Science in 2017. I'm known to be a jack of all trades due to my breadth of knowledge of various programming languages such as:
           </Typography>
           <Container maxWidth="md">
             <Paper elevation={0} style={{marginBottom: "50px", marginTop: "50px"}}>
@@ -181,6 +229,35 @@ function HomePage(props) {
         <Typography variant="h2" id="projects">Projects</Typography>
         <GameBoxesLayout/>
       </Container>
+      <Container maxWidth="md" style={{marginTop: "10px", marginBottom: "100px"}}>
+        <Typography variant="h4">
+          Website built using...
+        </Typography>
+        <Grid container justify="center" spacing={4}>
+          <Grid item>
+            <Link href="https://reactjs.org/">
+              <Card style={{width: "150px", height: "75px"}}>
+                <CardMedia component="img" image="images/React-logo-1.png" style={{position:"relative", right: "2%", top: "5%"}}/>
+              </Card>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link href="https://pages.github.com/">
+              <Card style={{width: "150px", height: "75px"}}>
+                <CardMedia component="img" image="images/github_pages_logo.jpg"/>
+              </Card>
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link href="https://material-ui.com/">
+              <Card style={{width: "150px", height: "75px"}}>
+                <CardMedia component="img" image="images/materialUILogo.png"/>
+              </Card>
+            </Link>
+          </Grid>
+        </Grid>
+      </Container>
+      <LabelBottomNavigation/>
     </div>
   );
 }

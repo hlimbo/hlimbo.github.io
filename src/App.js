@@ -108,7 +108,7 @@ function IntroCard() {
           <Typography variant="h2">Hi I'm...</Typography>
         </Grid>
         <Grid item>
-          <Paper square variant="outlined" style={{minWidth: "50vw"}}>
+          <Paper elevation={0} style={{minWidth: "50vw"}}>
             <Typography align="center" 
                         variant="h2"
                         color="primary" 
