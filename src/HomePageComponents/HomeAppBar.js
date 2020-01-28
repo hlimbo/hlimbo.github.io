@@ -34,24 +34,32 @@ class HomeAppBar extends React.Component {
     this.state = {
       tabIndex: 0
     }
+
+    this.updateTabHighlight = this.updateTabHighlight.bind(this);
+  }
+
+  updateTabHighlight() {
+    const aboutMe = document.querySelector("#about_me");
+    const projects = document.querySelector("#projects");
+    if(aboutMe !== undefined && projects !== undefined) {
+      const aboutMeBoundBox = aboutMe.getBoundingClientRect();
+      let projectsBoundBox = projects.getBoundingClientRect();
+      if(isInViewportView(aboutMeBoundBox)) {
+        this.setState({tabIndex: 0});
+      } else if(isInViewportView(projectsBoundBox)) {
+        this.setState({tabIndex: 1});
+      }
+    }
   }
 
   componentDidMount() {
     // After output has been rendered to the dom
-    window.addEventListener("scroll", () => {
-      // concerned that these ids in the dom won't load  in the order I expect it to load
-      const aboutMe = document.querySelector("#about_me");
-      const projects = document.querySelector("#projects");
-      if(aboutMe !== undefined && projects !== undefined) {
-        const aboutMeBoundBox = aboutMe.getBoundingClientRect();
-        let projectsBoundBox = projects.getBoundingClientRect();
-        if(isInViewportView(aboutMeBoundBox)) {
-          this.setState({tabIndex: 0});
-        } else if(isInViewportView(projectsBoundBox)) {
-          this.setState({tabIndex: 1});
-        }
-      }
-    });
+    window.addEventListener("scroll", this.updateTabHighlight);
+  }
+
+  // only gets called if HomeAppBar Component is removed from the DOM
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.updateTabHighlight);
   }
 
   render() {

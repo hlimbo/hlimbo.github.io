@@ -6,9 +6,9 @@ import CardContent from '@material-ui/core/CardContent';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 // include this to keep hovering behavior present
-//import '../App.css';
-import Link from '@material-ui/core/Link';
+import '../App.css';
 import Avatar from '@material-ui/core/Avatar';
+import { Link } from 'react-router-dom';
 
 // equivalent to providing css to the js
 const useStyles = makeStyles(theme => ({
@@ -94,7 +94,7 @@ function ClickableCard({
 }) {
   const classes = useStyles();
   return (
-    <Link href={projectLink}>
+    <Link to={`/${projectName}`}>
       <Card className={classes.size250px}>
         <CardMedia component="img"
                   image={imagePath}
@@ -110,62 +110,62 @@ function ContentLayout() {
   const classes = useStyles();
 
   return(
-    <Grid container 
-          justify="center" 
-          className={classes.root} 
-          spacing={2}>
-      <Grid item>
-        <ClickableCard projectLink="https://google.com"
-                       imagePath="images/MathNinjaPreview.PNG"
-                       projectDate="Dec. 2017"
-                       projectName="MathNinja"/>
+      <Grid container 
+      justify="center" 
+      className={classes.root} 
+      spacing={2}>
+        <Grid item>
+          <ClickableCard projectLink="https://google.com"
+                        imagePath="images/MathNinjaPreview.PNG"
+                        projectDate="Dec. 2017"
+                        projectName="MathNinja"/>
+        </Grid>
+        <Grid item>
+          <ClickableCard projectLink="https://google.com"
+                        imagePath="images/EdgeLordPreview2.PNG"
+                        projectDate="Sept. 2017"
+                        projectName="EdgeLord"/>
+        </Grid>
+        <Grid item>
+          <ClickableCard projectLink="https://google.com"
+                        imagePath="images/StarChaserPreview.PNG"
+                        projectDate="Sept. 2017"
+                        projectName="StarChaser"/>
+        </Grid>
+        <Grid item>
+          <Link href="https://google.com">
+            <Card className={classes.size250px}>
+              <CardMedia component="img"
+                        image="images/HydroHuntersPreview7.PNG"
+                        className={classes.imagePreviewSize}/>
+              <ShadowOverlay date="Sept. 2017"
+                            projectName="Hydro Hunters"/>
+            </Card>
+          </Link>
+        </Grid>
+        <Grid item>
+          <Link href="https://google.com">
+            <Card className={classes.size250px}>
+              <CardMedia component="img"
+                        image="images/ShovelBallPreview6.PNG"
+                        className={classes.imagePreviewSize}/>
+              <ShadowOverlay date="Sept. 2017"
+                            projectName="Shovel Ball"/>
+            </Card>
+          </Link>
+        </Grid>
+        <Grid item>
+          <Link href="https://google.com">
+            <Card className={classes.size250px}>
+              <CardMedia component="img"
+                        image="images/SpookySpoilsPreview3.PNG"
+                        className={classes.imagePreviewSize}/>
+              <ShadowOverlay date="April 2016"
+                            projectName="Spooky Spoils"/>
+            </Card>
+          </Link>
+        </Grid>
       </Grid>
-      <Grid item>
-        <ClickableCard projectLink="https://google.com"
-                       imagePath="images/EdgeLordPreview2.PNG"
-                       projectDate="Sept. 2017"
-                       projectName="EdgeLord"/>
-      </Grid>
-      <Grid item>
-        <ClickableCard projectLink="https://google.com"
-                       imagePath="images/StarChaserPreview.PNG"
-                       projectDate="Sept. 2017"
-                       projectName="StarChaser"/>
-      </Grid>
-      <Grid item>
-        <Link href="https://google.com">
-          <Card className={classes.size250px}>
-            <CardMedia component="img"
-                      image="images/HydroHuntersPreview7.PNG"
-                      className={classes.imagePreviewSize}/>
-            <ShadowOverlay date="Sept. 2017"
-                           projectName="Hydro Hunters"/>
-          </Card>
-        </Link>
-      </Grid>
-      <Grid item>
-        <Link href="https://google.com">
-          <Card className={classes.size250px}>
-            <CardMedia component="img"
-                      image="images/ShovelBallPreview6.PNG"
-                      className={classes.imagePreviewSize}/>
-            <ShadowOverlay date="Sept. 2017"
-                           projectName="Shovel Ball"/>
-          </Card>
-        </Link>
-      </Grid>
-      <Grid item>
-        <Link href="https://google.com">
-          <Card className={classes.size250px}>
-            <CardMedia component="img"
-                      image="images/SpookySpoilsPreview3.PNG"
-                      className={classes.imagePreviewSize}/>
-            <ShadowOverlay date="April 2016"
-                           projectName="Spooky Spoils"/>
-          </Card>
-        </Link>
-      </Grid>
-    </Grid>
   );
 }
 

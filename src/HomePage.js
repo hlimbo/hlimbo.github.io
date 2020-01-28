@@ -4,6 +4,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import makeStyles from '@material-ui/styles/makeStyles';
 
 import HomeAppBar from './HomePageComponents/HomeAppBar';
 import IntroCard from './HomePageComponents/IntroCard';
@@ -12,7 +13,15 @@ import WebsiteBuiltWithSection from './HomePageComponents/WebsiteBuiltWithSectio
 import ContentLayout from './HomePageComponents/ContentLayout';
 import LabelBottomNavigation from './LabelBottomNav';
 
+const useStyles = makeStyles(theme => ({
+  typography: {
+    borderBottom: "0.1rem solid", 
+    marginBottom: "1rem"
+  }
+}));
+
 export default function HomePage(props) {
+  const styles = useStyles();
   return (
     <div>
       <HomeAppBar/>
@@ -39,7 +48,7 @@ export default function HomePage(props) {
           </List>
       </Container>
       <Container maxWidth="md">
-        <Typography variant="h2" id="projects">Projects</Typography>
+        <Typography variant="h2" id="projects" className={styles.typography}>Projects</Typography>
         <ContentLayout/>
       </Container>
       <WebsiteBuiltWithSection/>
