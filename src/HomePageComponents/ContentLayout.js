@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    marginTop: "10px", 
-    marginBottom: "10px"
+    marginTop: "2rem", 
+    marginBottom: "2rem"
   },
   paper: {
     position: "relative",
@@ -87,10 +87,9 @@ function ShadowOverlay({date, projectName, imagePath}) {
 }
 
 function ClickableCard({
-  projectLink,
   imagePath,
   projectDate,
-  projectName
+  projectName,
 }) {
   const classes = useStyles();
   return (
@@ -108,63 +107,22 @@ function ClickableCard({
 
 function ContentLayout() {
   const classes = useStyles();
+  const [projectsList] = React.useState(require('../JsonData/projectsList.json'));
 
   return(
       <Grid container 
       justify="center" 
       className={classes.root} 
       spacing={2}>
-        <Grid item>
-          <ClickableCard projectLink="https://google.com"
-                        imagePath="images/MathNinjaPreview.PNG"
-                        projectDate="Dec. 2017"
-                        projectName="MathNinja"/>
-        </Grid>
-        <Grid item>
-          <ClickableCard projectLink="https://google.com"
-                        imagePath="images/EdgeLordPreview2.PNG"
-                        projectDate="Sept. 2017"
-                        projectName="EdgeLord"/>
-        </Grid>
-        <Grid item>
-          <ClickableCard projectLink="https://google.com"
-                        imagePath="images/StarChaserPreview.PNG"
-                        projectDate="Sept. 2017"
-                        projectName="StarChaser"/>
-        </Grid>
-        <Grid item>
-          <Link href="https://google.com">
-            <Card className={classes.size250px}>
-              <CardMedia component="img"
-                        image="images/HydroHuntersPreview7.PNG"
-                        className={classes.imagePreviewSize}/>
-              <ShadowOverlay date="Sept. 2017"
-                            projectName="Hydro Hunters"/>
-            </Card>
-          </Link>
-        </Grid>
-        <Grid item>
-          <Link href="https://google.com">
-            <Card className={classes.size250px}>
-              <CardMedia component="img"
-                        image="images/ShovelBallPreview6.PNG"
-                        className={classes.imagePreviewSize}/>
-              <ShadowOverlay date="Sept. 2017"
-                            projectName="Shovel Ball"/>
-            </Card>
-          </Link>
-        </Grid>
-        <Grid item>
-          <Link href="https://google.com">
-            <Card className={classes.size250px}>
-              <CardMedia component="img"
-                        image="images/SpookySpoilsPreview3.PNG"
-                        className={classes.imagePreviewSize}/>
-              <ShadowOverlay date="April 2016"
-                            projectName="Spooky Spoils"/>
-            </Card>
-          </Link>
-        </Grid>
+        {
+          projectsList.map((p, index) =>
+            <Grid item key={index}>
+              <ClickableCard projectName={p.name}
+                             projectDate={p.projectDate}
+                             imagePath={p.imagePath}/>
+            </Grid>
+          )
+        }
       </Grid>
   );
 }

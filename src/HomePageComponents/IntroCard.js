@@ -12,8 +12,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const names = [ 'a Software Engineer', 'a UCI Graduate', 'Harvey Limbo'];
-
 function animateCSS(element, animationName, callback) {
   const node = document.querySelector(element)
   node.classList.add('animated', animationName)
@@ -31,14 +29,21 @@ function animateCSS(element, animationName, callback) {
 export default function IntroCard() {
   const styles = useStyles();
   const [nameTagIndex, setNameTagIndex] = React.useState(0);
+  const [names] = React.useState([ 'a Software Engineer', 'a UCI Graduate', 'Harvey Limbo']);
 
   // only gets called after all dom mutations happen
+  let timeoutIndices = [];
   React.useLayoutEffect(() => {
     animateCSS('.nameTag', 'slideInDown', () => {
       if(nameTagIndex < names.length - 1) {
-        setTimeout(() => setNameTagIndex(nameTagIndex + 1), 1000);
+        const timeoutIndex = setTimeout(() => setNameTagIndex(nameTagIndex + 1), 1000);
+        timeoutIndices.push(timeoutIndex);
       }
     });
+
+    return function cleanup() {
+      timeoutIndices.forEach(timeoutIndex => clearTimeout(timeoutIndex));
+    }
   });
 
   return (

@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "EdgeLord_Release.data.unityweb",
+"asmCodeUrl": "EdgeLord_Release.asm.code.unityweb",
+"asmMemoryUrl": "EdgeLord_Release.asm.memory.unityweb",
+"asmFrameworkUrl": "EdgeLord_Release.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

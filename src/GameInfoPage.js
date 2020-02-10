@@ -5,39 +5,97 @@ import Container from '@material-ui/core/Container';
 import GameInfoAppBar from './ProjectInfoComponents/GameInfoAppBar';
 import MainImage from './ProjectInfoComponents/MainImage';
 import { CardImage, GameInfoScreenshots } from './ProjectInfoComponents/GameInfoComponents';
+import UnityGameScreen from './ProjectInfoComponents/UnityGameScreen';
 import LabelBottomNav from './LabelBottomNav';
+import BulletedSection from './ProjectInfoComponents/BulletedSection';
 
 const useStyles = makeStyles(theme => ({
   typography: {
     borderBottom: "0.1rem solid", 
     marginBottom: "1rem"
+  },
+  margins: {
+    marginTop: "2rem",
+    marginBottom: "2rem"
   }
 }));
 
-
-// TODO: find out a way to dynamically load string data depending on what link was clicked on...
-export default function GameInfoPage({aboutGameSummary}) {
+/*
+ * projectInfoData: json file containing information about current project
+ */
+export default function GameInfoPage({projectInfoData}) {
   const styles = useStyles();
+
+  let data;
+  if(projectInfoData === undefined || projectInfoData === null || projectInfoData === {}) {
+    data = {
+      projectName: "Undefined Project",
+      githubLink: "https://google.com",
+      aboutGame: "Lorem Ipsum Text",
+      gameScreenshots: {
+        mainImagePath: null,
+        images: []
+      }
+    }
+  } else {
+    data = projectInfoData;
+  }
+
+  // OPTIONAL SECTIONS
+  const howToPlaySection =
+    data.optional !== undefined && 
+    data.optional.howToPlay !== undefined &&
+    <div className={styles.margins}>
+      <BulletedSection sectionTitle="How To Play"
+                       bulletList={data.optional.howToPlay}/>
+    </div>;
+
+  const gameScreen = 
+    data.optional !== undefined &&
+    data.optional.webGLPaths !== undefined &&
+    <div className={styles.margins}>
+      <UnityGameScreen 
+        buildReleaseJsonPath={data.optional.webGLPaths.buildReleaseJsonPath}
+        unityLoaderPath={data.optional.webGLPaths.unityLoaderPath}/>
+    </div>;
+
+  const creditsSection =
+    data.optional !== undefined &&
+    data.optional.credits !== undefined &&
+    data.optional.credits.length > 0 &&
+    <div style={{marginBottom: "8rem"}}>
+      <BulletedSection 
+        sectionTitle="Credits"
+        bulletList={data.optional.credits}/>
+    </div>;    
+  // ****************************
+
   return (
     <div>
-      <GameInfoAppBar projectTitle="MathNinja"
-                      githubLink="https://github.com/hlimbo/MathNinja"/>
-      <MainImage imagePath="images/MathNinjaPreview.PNG"/>
-      <Container>
+      <GameInfoAppBar projectTitle={data.projectName}
+                      githubLink={data.githubLink}/>
+      <MainImage imagePath={data.gameScreenshots.mainImagePath}/>
+      {gameScreen}
+      {howToPlaySection}
+      <Container className={styles.margins}>
         <Typography variant="h2" className={styles.typography}>
           About Game
         </Typography>
-        <Typography>
-          MathNinja is an educational game catered towards elementary schoolers who have trouble memorizing their multiplication tables. I was inspired to create this game from my little brother who had trouble memorizing his multiplication tables. If you are tired of flipping through boring old flash cards in hopes of memorizing your multiplication tables, then this game is for you! 
-        </Typography>
+        {
+          data.aboutGame.map((p, index) => <div><Typography key={index}>{p}</Typography><br/></div>)
+        }
       </Container>
-      <Container>
+      <Container className={styles.margins}>
         <Typography variant="h2" className={styles.typography}>Screenshots</Typography>
         <GameInfoScreenshots>
-          <CardImage imagePath="images/MathNinjaPreview.PNG"/>
-          <CardImage imagePath="images/MathNinjaPreview.PNG"/>
+          {
+            data.gameScreenshots.images.map((path, index) =>
+              <CardImage key={index} imagePath={path} />
+            )
+          }
         </GameInfoScreenshots>
       </Container>
+      {creditsSection}
       <LabelBottomNav/>
     </div>
   );

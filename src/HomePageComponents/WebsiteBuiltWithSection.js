@@ -19,6 +19,9 @@ const useStyles = makeStyles(theme => ({
     position:"relative", 
     right: "2%", 
     top: "5%"
+  },
+  margins: {
+    marginBottom: "2rem"
   }
 }));
 
@@ -26,32 +29,32 @@ export default function WebsiteBuiltWithSection() {
   const style = useStyles();
   return (
     <Container maxWidth="md" className={style.containerStyle}>
-      <Typography variant="h6">
+      <Typography variant="h6" className={style.margins}>
         Website built using...
       </Typography>
       <Grid container justify="center" spacing={4}>
         <Grid item>
-          <Link href="https://reactjs.org/">
+          <Link href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">
             <Card className={style.card125px}>
               <CardMedia component="img" 
-                         image="images/React-logo-1.png" 
+                         image="images/homepage/React-logo-1.png" 
                          className={style.cardMediaStyle}/>
             </Card>
           </Link>
         </Grid>
         <Grid item>
-          <Link href="https://material-ui.com/">
+          <Link href="https://material-ui.com/" target="_blank" rel="noopener noreferrer"> 
             <Card className={style.card125px}>
               <CardMedia component="img" 
-                         image="images/materialUILogo.png"/>
+                         image="images/homepage/materialUILogo.png"/>
             </Card>
           </Link>
         </Grid>
         <Grid item>
-          <Link href="https://pages.github.com/">
+          <Link href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">
             <Card className={style.card125px}>
               <CardMedia component="img" 
-                         image="images/github_pages_logo.jpg"/>
+                         image="images/homepage/github_pages_logo.jpg"/>
             </Card>
           </Link>
         </Grid>

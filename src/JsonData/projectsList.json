@@ -1,0 +1,38 @@
+[
+  {
+    "name": "StarChaser",
+    "projectName": "StarChaser",
+    "projectDate": "Dec. 2017",
+    "imagePath": "images/projects/starchaser/StarChaserPreview.PNG"
+  },
+  {
+    "name": "MathNinja",
+    "projectName": "MathNinja",
+    "projectDate": "Sept. 2017",
+    "imagePath": "images/projects/mathninja/MathNinjaPreview.PNG"
+  },
+  {
+    "name": "EdgeLord",
+    "projectName": "EdgeLord",
+    "projectDate": "Apr. 2017",
+    "imagePath": "images/projects/edgelord/EdgeLordPreview2.PNG"
+  },
+  {
+    "name": "HydroHunters",
+    "projectName": "Hydro Hunters",
+    "projectDate": "March 2017",
+    "imagePath": "images/projects/hydrohunters/HydroHuntersPreview7.PNG"
+  },
+  {
+    "name": "SpookySpoils",
+    "projectName": "Spooky Spoils",
+    "projectDate": "Apr. 2016",
+    "imagePath": "images/projects/spookyspoils/SpookySpoilsPreview3.PNG"
+  },
+  {
+    "name": "ShovelBall",
+    "projectName": "Shovel Ball",
+    "projectDate": "Jan. 2016",
+    "imagePath": "images/projects/shovelball/ShovelBallPreview6.PNG"
+  }
+]

@@ -31,56 +31,56 @@ export default function ProgrammingLanguagesPanel() {
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/cSharplogo.png" 
+                       image="images/homepage/cSharplogo.png" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/JavaScript-logo.png" 
+                       image="images/homepage/JavaScript-logo.png" 
                       className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/javaLogo.png" 
+                       image="images/homepage/javaLogo.png" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/pythonLogo.png" 
+                       image="images/homepage/pythonLogo.png" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/rubyLogo.png" 
+                       image="images/homepage/rubyLogo.png" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/kotlinLogo.jpg" 
+                       image="images/homepage/kotlinLogo.jpg" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/cLogo.png" 
+                       image="images/homepage/cLogo.png" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>
         <Grid item>
           <Card className={styles.card}>
             <CardMedia component="img" 
-                       image="images/cPlusPlusLogo.png" 
+                       image="images/homepage/cPlusPlusLogo.png" 
                        className={styles.cardMediaStyle}/>
           </Card>
         </Grid>

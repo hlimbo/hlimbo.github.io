@@ -1,0 +1,25 @@
+{
+  "projectName": "EdgeLord",
+  "githubLink": "https://github.com/hlimbo/EDGELORD",
+  "aboutGame": ["Edgelord is a local 2 player game where each player is a blacksmith competing against each other to have the edgy-iest (longest) sword ever. Cut away the opposing blacksmith's sword and forge your way to victory by creating a sword so edgy that no blacksmith can chip away your masterpiece! This game was built over the course of a weekend during Spring 2017 Quarter Game at UCI for the Video Game Development Club (VGDC). The group I was in were all programmers, so it was difficult at first figuring out how we would write code together using git version control. We used branching and merging to ease the workflow of our code which helped prevent alot of merge conflicts that can occur if any one of us decided to work on the same script at the same time. I helped implement code that involved slicing apart the sword blades and connecting the sword blades together. In addition, I designed and animated the controls UI layout."],
+  "gameScreenshots": {
+    "mainImagePath": "images/projects/mathninja/MathNinjaPreview.PNG",
+    "images": [
+      "images/projects/mathninja/MathNinjaGameplay.gif",
+      "images/projects/mathninja/MathNinjaGameplay2.gif"
+    ]
+  },
+  "optional": {
+    "webGLPaths": {
+      "buildReleaseJsonPath": "content/EdgeLord_Release/Build/EdgeLord_Release.json",
+      "unityLoaderPath": "content/EdgeLord_Release/Build/UnityLoader.js"
+    },
+    "credits": [
+      "Michael Wolf - Programmer",
+      "Ben Everett - Programmer",
+      "Vincent Chang - Programmer/Audio Designer (Special thanks to him for creating the awesome music!)",
+      "Jake Smith - Programmer/Artist/UI Designer",
+      "Harvey Limbo - Programmer/UI Designer"
+    ]
+  }
+}

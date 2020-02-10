@@ -29,7 +29,7 @@ export default function LabelBottomNavigation() {
   // Todo: make sure these links open a new tab
   return (
     <BottomNavigaton value={value} onChange={handleChange} className={style.labelBottomNav}>
-      <BottomNavigationAction target="_blank" rel="noopener noreferrer" component="a" href="https://google.com" showLabel label="Resume" value="resume" icon={<ListAltIcon />} />
+      <BottomNavigationAction target="_blank" rel="noopener noreferrer" component="a" href="content/HarveyLimboResume.pdf" showLabel label="Resume" value="resume" icon={<ListAltIcon />} />
       <BottomNavigationAction target="_blank" rel="noopener noreferrer" component="a" href="https://www.linkedin.com/in/harvey-limbo-a10809151/" showLabel label="LinkedIn" value="linkedin" icon={<LinkedInIcon />} />
       <BottomNavigationAction showLabel label="Limboh27@gmail.com" value="email" icon={<EmailIcon />} />
       <BottomNavigationAction target="_blank" rel="noopener noreferrer" component="a" href="https://github.com/hlimbo" showLabel label="Github" value="github" icon={<GitHubIcon />} />

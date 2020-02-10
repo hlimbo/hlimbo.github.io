@@ -1,0 +1,48 @@
+{
+  "projectName": "Hydro Hunters",
+  "githubLink": null,
+  "aboutGame": [
+    "Hydro Hunters is a local 2 player game where each player plays as a merman competing against each other's sea kingdom. Each merman has the power to summon sea creatures to his calling to attack the opposing merman until his health reaches zero. Avoid spawning too many sea creatures at once as it takes some of your life force when spawning one. Dodge the opposing merman's sea creatures attacks while shooting bubble beams from your trident to slay them. Last one with the most health or hasn't been slain before time runs out wins!",
+    "Game was created during Hacktech 2017 at Caltech for their hackathon event which lasted one weekend. Originally, I was supposed to be with my 2 friends who I carpooled with to develop some sort of non-game related application. However, due to various disagreements with which idea to stick with, we ended up disbanding and finding other people to work with at the event.",
+    "Luckily, I found 2 game developers whose main roles were artists/designers and we decided to create a fast paced tower defense game. Similiar to my previous group who I disbanded with, the first few hours of brainstorming together of what a fun game would be was the most frustrating since we did not find game elements we all agreed with to work on. However, sticking through with this frustation until we found a game design we all agreed to work on was the most rewarding feeling I experienced during the hackathon as it helped me code furiously through implementing in game UI layout and gameplay mechanics such as player movement, shooting of bubble beams, and spawning of sea creatures.",
+    "Halfway towards the duration of the event, 2 more programmers joined the group to help add more interesting features to the game. Some of the new interesting features added onto were the ability to summon a shark laser sea creature and random events. The first random event was to spawn a life heart towards the center of the battle field at a random y position. The second random event was to spawn 2 sea urchin mines from the top of the battlefield that would follow each merman and upon contact would explode, dealing damage to the affected merman's health pool. I appreciate the amount of fun the 2 programmers were able to add in the game as it was becoming difficult for me to code alone until they came along.",
+    "Unfortunately, they had to leave on the last day of the event where I had to buckle up as the sole game programmer of the team to help guide my team to finish up developing the game and submitting it before the deadline struck. An unexpected struggle we came across were Unity's InputManager system's compatibility with PS4 controllers. The PS4 controllers weren't receiving proper input when the game launched and we only had a few hours left until the deadline. We had to decide to not use the PS4 controllers and instead used a second external keyboard as a controller for the game. This quick hack worked as a marvelous solution at the time as we were able to successfully demo our game using that setup."
+  ],
+  "gameScreenshots": {
+    "mainImagePath": "images/projects/hydrohunters/HydroHuntersPreview3.PNG",
+    "images": [
+      "images/projects/hydrohunters/HydroHuntersPreview.PNG",
+      "images/projects/hydrohunters/HydroHuntersPreview2.PNG",
+      "images/projects/hydrohunters/HydroHuntersPreview3.PNG"
+    ]
+  },
+  "optional": {
+    "webGLPaths": {
+      "buildReleaseJsonPath": "content/MathNinja_Release/Build/MathNinja_Release.json",
+      "unityLoaderPath": "content/MathNinja_Release/Build/UnityLoader.js"
+    },
+    "howToPlay": [
+      "Player 1 (Green Merman):", 
+      "ASWD Keys to move", 
+      "Bubble Shield - Y Key", 
+      "Shoot Projectile - U key", "Summon Dragon - I key", 
+      "Summon Urchin - O key", 
+      "Summon Shark - P key",
+      "-",
+      "Player 2 (Red Merman):",
+      "Arrow Keys to move",
+      "Bubble Shield - B key",
+      "Shoot Projectile - V key",
+      "Summon Dragon - Z key",
+      "Summon Urchin - X key",
+      "Summon Shark - C key"
+    ],
+    "credits": [
+      "Andy Cook - Artist/Designer",
+      "Nandan Vinjamury - Artist",
+      "Zach Yun - Programmer",
+      "Kyle Turchik - Programmer",
+      "Harvey Limbo - Programmer"
+    ]
+  }
+}

@@ -7,8 +7,8 @@ import makeStyles from '@material-ui/styles/makeStyles';
 
 const useStyles = makeStyles(theme => ({
   containerMargins: {
-    marginTop: "2rem",
-    marginBottom: "6rem"
+    marginTop: "4rem",
+    marginBottom: "4rem"
   }
 }));
 

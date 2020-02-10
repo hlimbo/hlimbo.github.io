@@ -20,7 +20,7 @@ import Container from '@material-ui/core/Container';
 //         <p>
 //           <ul>
 //             <li>Ninja (Spelunky) <a href="https://www.spriters-resource.com/fullview/56425/">https://www.spriters-resource.com/fullview/56425/</a></li>
-//             <li>tiles and background images by Franco Giachetti (<a href="http://www.ludicarts.com/free-game-platform-tileset/">http://www.ludicarts.com/free-game-platform-tileset/</a>) which is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></li>
+//             <li>Tiles and background images by Franco Giachetti (<a href="http://www.ludicarts.com/free-game-platform-tileset/">http://www.ludicarts.com/free-game-platform-tileset/</a>) which is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></li>
 //           </ul>
 //         </p>
 //       </section>
@@ -42,7 +42,7 @@ import Container from '@material-ui/core/Container';
 // }
 
 export default function UnityGameScreen({buildReleaseJsonPath, unityLoaderPath}) {
-  const [unityContent, _] = React.useState(new UnityContent(
+  const [unityContent] = React.useState(new UnityContent(
     buildReleaseJsonPath,
     unityLoaderPath
   ));

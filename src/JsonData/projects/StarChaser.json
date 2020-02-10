@@ -1,0 +1,34 @@
+{
+  "projectName": "Star Chaser",
+  "githubLink": "https://github.com/hlimbo/StarChaser",
+  "aboutGame": [
+    "StarChaser is a bullet hell inspired game built for Android mobile devices only. The game was built using the Unity engine for my CS113 course (Computer Game Development) at UCI during Fall Quarter 2017.",
+    "This was the first mobile game I developed which features one level and a boss. In the introductory level, your goal is to dodge and block using your shield any projectiles or enemies that come your way. At the end of the level, you will encounter a boss that has 3 phases of attack patterns. Each phase contains a set of movements that the boss can execute. Your job as the player piloting the ship is to learn how the boss operates and use what you've learned to take the beast down!",
+    "I programmed and designed the Boss, programmed and designed in game UI for touch controls, and programmed player controller."
+  ],
+  "gameScreenshots": {
+    "mainImagePath": "images/projects/starchaser/StarChaserPreview.PNG",
+    "images": [
+      "images/projects/starchaser/gameplay1.gif",
+      "images/projects/starchaser/gameplay2.gif",
+      "images/projects/starchaser/gameplay3.gif",
+      "images/projects/starchaser/gameplay4.gif",
+      "images/projects/starchaser/Screenshot_20200125-155303.png",
+      "images/projects/starchaser/Screenshot_20200125-155418.png",
+      "images/projects/starchaser/Screenshot_20200125-155428.png",
+      "images/projects/starchaser/Screenshot_20200125-155438.png"
+    ]
+  },
+  "optional": {
+    "webGLPaths": {
+      "buildReleaseJsonPath": "content/MathNinja_Release/Build/MathNinja_Release.json",
+      "unityLoaderPath": "content/MathNinja_Release/Build/UnityLoader.js"
+    },
+    "howToPlay": ["Spacebar to Jump", "Left and Right Arrow Keys to Move."],
+    "credits": [
+      "Thank you Trey for the boss art and designs!",
+      "Thank you Nick for Sound Design and feedback for Input Design for the mobile controls!",
+      "Thank you Emil and Sai for design feedback for the mobile control designs I proposed during the early stages of the game's development!"
+    ]
+  }
+}

@@ -8,22 +8,25 @@ import { Route,
          BrowserRouter as Router } 
 from 'react-router-dom';
 
-// I'll need to add a list of projectnames
-// Based on projectName
-// GameInfoPage will load data from a .json file to 
-// render the necesary
-// data to render the page
+import ScrollToTop from './utils/ScrollToTop';
+const projectsList = require('./JsonData/projectsList.json');
 
 export default function App() {
   return (
     <Router forceRefresh>
+      <ScrollToTop/>
       <Switch>
         <Route exact path="/">
           <HomePage/>
         </Route>
-        <Route exact sensitive path="/MathNinja">
-          <GameInfoPage/>
-        </Route>
+        {
+          projectsList.map((project, index) => 
+            <Route key={index} exact sensitive path={`/${project.name}`}>
+              <GameInfoPage 
+                projectInfoData={require(`./JsonData/projects/${project.name}.json`)}/>
+            </Route>
+          )
+        }
       </Switch>
     </Router>
   );

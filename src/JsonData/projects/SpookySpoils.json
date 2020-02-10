@@ -1,0 +1,27 @@
+{
+  "projectName": "Spooky Spoils",
+  "githubLink": "https://github.com/eaho1/Spooky-Spoils",
+  "aboutGame": [
+    "Spooky Spoils was a game created during the Video Game Development Club at UCI's 2016 Spring Game Jam over the span of one weekend (about 20 hours of work). An extra 16 hours of work was put in to playtest, balance, and polish the game prior to the IEEE GameSig showcase. The game is unique in the sense that it incorporates innovative eye-tracking technology offered the Tobii--EyeX. During the polishing phase of the game, we also added a mouse option, allowing for players to enjoy the game without owning a Tobii device.",
+    "Spooky Spoils is a game in which you explore the haunted Blackbourne house in order to find the treasures of Lord Blackbourne. You must pass through puzzle rooms and avoid spooky ghosts. The Tobii EyeX is used as a flashlight to guide your way, revealing objects hidden by supernatural powers, making paranormal objects disappear, and stopping ghastly enemies.",
+    "Above game description taken from the following link: https://edwinho555.itch.io/spooky-spoils. Please visit the link to play the game."
+  ],
+  "gameScreenshots": {
+    "mainImagePath": "images/projects/spookyspoils/SpookySpoilsPreview3.PNG",
+    "images": [
+      "images/projects/spookyspoils/SpookySpoilsPreview.PNG",
+      "images/projects/spookyspoils/SpookySpoilsPreview2.PNG",
+      "images/projects/spookyspoils/SpookySpoilsPreview4.PNG",
+      "images/projects/spookyspoils/SpookySpoilsPreview5.PNG"
+    ]
+  },
+  "optional": {
+    "credits": [
+      "Andrew Chau - Programmer",
+      "Edwin Ho - Programmer",
+      "Harvey Limbo - Programmer/Artist",
+      "Shaun Reid - Writer",
+      "Wesley Tseng - Artist"
+    ]
+  }
+}
