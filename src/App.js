@@ -4,7 +4,8 @@ import GameInfoPage from './GameInfoPage';
 import 'typeface-roboto';
 
 import { Route, 
-         Switch, 
+         Switch,
+         useLocation, 
          HashRouter as Router } 
 from 'react-router-dom';
 
@@ -21,8 +22,9 @@ export default function App() {
         </Route>
         {
           projectsList.map((project, index) => 
-            <Route key={index} exact sensitive path={`/${project.name}`}>
-              <GameInfoPage 
+            <Route key={index} exact sensitive 
+                   path={`/${project.name}`}>
+              <GameInfoPage key={index} 
                 projectInfoData={require(`./JsonData/projects/${project.name}.json`)}/>
             </Route>
           )

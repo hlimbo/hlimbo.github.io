@@ -1,50 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* See https://github.com/elraccoone/react-unity-webgl/issues/47 */
 /* This dynamically resizes the Unity Game view canvas */
 .game-container canvas {
   width: 100% !important; 
   height: 50% !important;
-}
-
-/* Used for ContentLayout component enables hovering overlay via pseudo class */
-[class*="overlay"]:hover {
-  opacity: 1;
-  background-color: rgba(43, 33, 89, 0.5);
 }

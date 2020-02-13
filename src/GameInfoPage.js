@@ -82,7 +82,7 @@ export default function GameInfoPage({projectInfoData}) {
           About Game
         </Typography>
         {
-          data.aboutGame.map((p, index) => <div><Typography key={index}>{p}</Typography><br/></div>)
+          data.aboutGame.map((p, index) => <div key={index}><Typography>{p}</Typography><br/></div>)
         }
       </Container>
       <Container className={styles.margins}>

@@ -5,8 +5,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
-// include this to keep hovering behavior present
-import '../App.css';
 import Avatar from '@material-ui/core/Avatar';
 import { Link } from 'react-router-dom';
 
@@ -45,6 +43,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(0,0,0,0)",
     opacity: "0",
     transition: "all 0.3s ease-in-out",
+    '&:hover': {
+      opacity: 1,
+      backgroundColor: "rgba(43, 33, 89, 0.5)"
+    }
   },
   captionContent: {
     color: "white",

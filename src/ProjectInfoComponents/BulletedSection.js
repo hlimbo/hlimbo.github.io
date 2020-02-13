@@ -26,7 +26,7 @@ export default function BulletedSection({sectionTitle, bulletList}) {
       <ul className={styles.bullets}>
         {
           bulletList !== undefined ? 
-          bulletList.map(listItem => <li><Typography>{listItem}</Typography></li>) : 
+          bulletList.map((listItem, index) => <li key={index}><Typography>{listItem}</Typography></li>) : 
             <li><Typography>BulletList is undefined</Typography></li>}
       </ul>
     </Container>
