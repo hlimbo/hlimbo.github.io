@@ -6,16 +6,18 @@
     "This was made during the Winter Quarter 2015 Game Jam at UCI for the Video Game Development Club (VGDC). This was my first game jame I participated in and was very excited yet unsure of how I would help develop the game alongside with my randomly selected group. Thankfully, I was grouped with an amazing programmer who helped show me the ropes on how to collaborate as a team. He introduced me to git version control, taught common coding practices in C# during game jams, and encouraged me to write scripts to respawn balls when they were hit towards the goal as well as the physics code for the ball movement. Overall, the game jam was a fun learning experience and I hope everyone who plays this game enjoys it as much as I did when I helped develop it."
   ],
   "gameScreenshots": {
-    "mainImagePath": "images/projects/shovelball/ShovelBallPreview4.PNG",
+    "mainImagePath": "images/projects/shovelball/ShovelBallPreview3.PNG",
     "images": [
-      "images/projects/mathninja/MathNinjaGameplay.gif",
-      "images/projects/mathninja/MathNinjaGameplay2.gif"
+      "images/projects/shovelball/ShovelBallPreview7.PNG",
+      "images/projects/shovelball/ShovelBallPreview.gif",
+      "images/projects/shovelball/ShovelBallPreview2.gif",
+      "images/projects/shovelball/ShovelBallPreview3.gif"
     ]
   },
   "optional": {
     "webGLPaths": {
-      "buildReleaseJsonPath": "content/MathNinja_Release/Build/MathNinja_Release.json",
-      "unityLoaderPath": "content/MathNinja_Release/Build/UnityLoader.js"
+      "buildReleaseJsonPath": "content/ShovelBall_Release/Build/ShovelBall_Release.json",
+      "unityLoaderPath": "content/ShovelBall_Release/Build/UnityLoader.js"
     },
     "howToPlay": [
       "Player 1 (Blue Player)",

@@ -26,7 +26,6 @@ export default function LabelBottomNavigation() {
     setValue(newValue);
   };
 
-  // Todo: make sure these links open a new tab
   return (
     <BottomNavigaton value={value} onChange={handleChange} className={style.labelBottomNav}>
       <BottomNavigationAction target="_blank" rel="noopener noreferrer" component="a" href="content/HarveyLimboResume.pdf" showLabel label="Resume" value="resume" icon={<ListAltIcon />} />

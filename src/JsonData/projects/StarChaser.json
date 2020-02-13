@@ -20,11 +20,6 @@
     ]
   },
   "optional": {
-    "webGLPaths": {
-      "buildReleaseJsonPath": "content/MathNinja_Release/Build/MathNinja_Release.json",
-      "unityLoaderPath": "content/MathNinja_Release/Build/UnityLoader.js"
-    },
-    "howToPlay": ["Spacebar to Jump", "Left and Right Arrow Keys to Move."],
     "credits": [
       "Thank you Trey for the boss art and designs!",
       "Thank you Nick for Sound Design and feedback for Input Design for the mobile controls!",

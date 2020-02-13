@@ -11,15 +11,14 @@
   "gameScreenshots": {
     "mainImagePath": "images/projects/hydrohunters/HydroHuntersPreview3.PNG",
     "images": [
-      "images/projects/hydrohunters/HydroHuntersPreview.PNG",
-      "images/projects/hydrohunters/HydroHuntersPreview2.PNG",
-      "images/projects/hydrohunters/HydroHuntersPreview3.PNG"
+      "images/projects/hydrohunters/HydroHuntersPreview.gif",
+      "images/projects/hydrohunters/HydroHuntersPreview2.gif"
     ]
   },
   "optional": {
     "webGLPaths": {
-      "buildReleaseJsonPath": "content/MathNinja_Release/Build/MathNinja_Release.json",
-      "unityLoaderPath": "content/MathNinja_Release/Build/UnityLoader.js"
+      "buildReleaseJsonPath": "content/HydroHunters_Release/Build/HydroHunters_Release.json",
+      "unityLoaderPath": "content/HydroHunters_Release/Build/UnityLoader.js"
     },
     "howToPlay": [
       "Player 1 (Green Merman):", 

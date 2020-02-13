@@ -41,7 +41,7 @@ export default function GameInfoPage({projectInfoData}) {
     data = projectInfoData;
   }
 
-  // OPTIONAL SECTIONS
+  // OPTIONAL SECTIONS ***************************************************************
   const howToPlaySection =
     data.optional !== undefined && 
     data.optional.howToPlay !== undefined &&
@@ -68,7 +68,7 @@ export default function GameInfoPage({projectInfoData}) {
         sectionTitle="Credits"
         bulletList={data.optional.credits}/>
     </div>;    
-  // ****************************
+  // *******************************************************************************
 
   return (
     <div>

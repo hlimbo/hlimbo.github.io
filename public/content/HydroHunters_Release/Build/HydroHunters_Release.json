@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "HydroHunters_Release.data.unityweb",
+"asmCodeUrl": "HydroHunters_Release.asm.code.unityweb",
+"asmMemoryUrl": "HydroHunters_Release.asm.memory.unityweb",
+"asmFrameworkUrl": "HydroHunters_Release.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
