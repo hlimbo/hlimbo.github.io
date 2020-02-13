@@ -2,8 +2,6 @@ import React from 'react';
 
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
 import makeStyles from '@material-ui/styles/makeStyles';
 
 import HomeAppBar from './HomePageComponents/HomeAppBar';
@@ -17,6 +15,9 @@ const useStyles = makeStyles(theme => ({
   typography: {
     borderBottom: "0.1rem solid", 
     marginBottom: "1rem"
+  },
+  bullets: {
+    listStyleType: "square"
   }
 }));
 
@@ -34,18 +35,18 @@ export default function HomePage(props) {
           <Typography>
             I'm open to learning different technologies to solve various problems with a focus on:
           </Typography>
-          <List>
-            <ListItem>
+          <ul className={styles.bullets}>
+            <li>
               <Typography>
-                - Backend Development
+                Backend Development
               </Typography>
-            </ListItem>
-            <ListItem>
+            </li>
+            <li>
               <Typography>
-                - Game Development
+                Game Development
               </Typography>
-            </ListItem>
-          </List>
+            </li>
+          </ul>
       </Container>
       <Container maxWidth="md">
         <Typography variant="h2" id="projects" className={styles.typography}>Projects</Typography>
