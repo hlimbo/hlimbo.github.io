@@ -5,7 +5,7 @@ import 'typeface-roboto';
 
 import { Route, 
          Switch, 
-         BrowserRouter as Router } 
+         HashRouter as Router } 
 from 'react-router-dom';
 
 import ScrollToTop from './utils/ScrollToTop';
@@ -13,7 +13,7 @@ const projectsList = require('./JsonData/projectsList.json');
 
 export default function App() {
   return (
-    <Router forceRefresh>
+    <Router basename="/">
       <ScrollToTop/>
       <Switch>
         <Route exact path="/">
