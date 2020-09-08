@@ -70,6 +70,27 @@ export default function GameInfoPage({projectInfoData}) {
     </div>;    
   // *******************************************************************************
 
+// if string contains http:// in the beginning, strip that value out and wrap it around anchor tags
+  const aboutGameSentences = data.aboutGame.map((p, index) => {
+
+    if (p.includes("http")) {
+      return (
+        <div>
+          <a href={p}
+            rel="noopener noreferrer" 
+            target="_blank">
+            <Typography>{p}</Typography>
+          </a>
+          <br/>
+        </div>
+      );
+    }
+
+    return (
+      <div key={index}><Typography>{p}</Typography><br/></div>
+    );
+  });  
+
   return (
     <div>
       <GameInfoAppBar projectTitle={data.projectName}
@@ -81,9 +102,7 @@ export default function GameInfoPage({projectInfoData}) {
         <Typography variant="h2" className={styles.typography}>
           About Game
         </Typography>
-        {
-          data.aboutGame.map((p, index) => <div key={index}><Typography>{p}</Typography><br/></div>)
-        }
+        {aboutGameSentences}
       </Container>
       <Container className={styles.margins}>
         <Typography variant="h2" className={styles.typography}>Screenshots</Typography>

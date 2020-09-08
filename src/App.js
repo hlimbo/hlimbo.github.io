@@ -29,6 +29,10 @@ export default function App() {
             </Route>
           )
         }
+        {/* Hard Code route for now but keep hidden from homepage*/}
+        <Route exact sensitive path={`/ProjectAce`}>
+          <GameInfoPage projectInfoData={require(`./JsonData/projects/ProjectAce.json`)}/>
+        </Route>
       </Switch>
     </Router>
   );

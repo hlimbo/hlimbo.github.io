@@ -28,23 +28,23 @@ function animateCSS(element, animationName, callback) {
 
 export default function IntroCard() {
   const styles = useStyles();
-  const [nameTagIndex, setNameTagIndex] = React.useState(0);
-  const [names] = React.useState([ 'a Software Engineer', 'a UCI Graduate', 'Harvey Limbo']);
+  // const [nameTagIndex, setNameTagIndex] = React.useState(0);
+  // const [names] = React.useState([ 'a Software Engineer', 'a UCI Graduate', 'Harvey Limbo']);
 
-  // only gets called after all dom mutations happen
-  let timeoutIndices = [];
-  React.useLayoutEffect(() => {
-    animateCSS('.nameTag', 'slideInDown', () => {
-      if(nameTagIndex < names.length - 1) {
-        const timeoutIndex = setTimeout(() => setNameTagIndex(nameTagIndex + 1), 1000);
-        timeoutIndices.push(timeoutIndex);
-      }
-    });
+  // // only gets called after all dom mutations happen
+  // let timeoutIndices = [];
+  // React.useLayoutEffect(() => {
+  //   animateCSS('.nameTag', 'slideInDown', () => {
+  //     if(nameTagIndex < names.length - 1) {
+  //       const timeoutIndex = setTimeout(() => setNameTagIndex(nameTagIndex + 1), 1000);
+  //       timeoutIndices.push(timeoutIndex);
+  //     }
+  //   });
 
-    return function cleanup() {
-      timeoutIndices.forEach(timeoutIndex => clearTimeout(timeoutIndex));
-    }
-  });
+  //   return function cleanup() {
+  //     timeoutIndices.forEach(timeoutIndex => clearTimeout(timeoutIndex));
+  //   }
+  // });
 
   return (
     <Container maxWidth="md" 
@@ -60,7 +60,7 @@ export default function IntroCard() {
                       variant="h2"
                       color="primary" 
                       className="nameTag">
-                        {names[nameTagIndex]}
+                        Harvey Limbo
           </Typography>
         </Grid>
       </Grid>

@@ -1,0 +1,27 @@
+{
+  "projectName": "Project Ace",
+  "githubLink": "https://github.com/hlimbo/ProjectAce",
+  "aboutGame": [
+    "Page is still under construction! Project Ace was originally a card game that was designed by my younger brother. I decided to port over the game in Unity using Mirror to have online multiplayer support up to 4 players. The game is currently supported on Windows, Mac, and WebGL. To try the game out, please visit [INSERT itch.io link here]"
+  ],
+  "gameScreenshots": {
+    "mainImagePath": "images/projects/projectace/ProjectAceTitleScreen.PNG",
+    "images": [
+      "images/projects/starchaser/gameplay1.gif"
+    ]
+  },
+  "optional": {
+    "webGLPaths": {
+      "buildReleaseJsonPath": "content/ProjectAce_Release/Build/WebGLBuild.json",
+      "unityLoaderPath": "content/ProjectAce_Release/Build/UnityLoader.js"
+    },
+    "credits": [
+      "card sounds from f4ngy",
+      "https://creativecommons.org/licenses/by/3.0/legalcode",
+      "https://freesound.org/people/f4ngy/",
+      "kenney audio assets",
+      "https://kenney.nl/assets/casino-audio",
+      "https://kenney.nl/assets/voiceover-pack"
+    ]
+  }
+}
