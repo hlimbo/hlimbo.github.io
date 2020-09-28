@@ -2,12 +2,21 @@
   "projectName": "Project Ace",
   "githubLink": "https://github.com/hlimbo/ProjectAce",
   "aboutGame": [
-    "Page is still under construction! Project Ace was originally a card game that was designed by my younger brother. I decided to port over the game in Unity using Mirror to have online multiplayer support up to 4 players. The game is currently supported on Windows, Mac, and WebGL. To try the game out, please visit [INSERT itch.io link here]"
+    "Disclaimer: Page is still under construction!",
+    "Project Ace was originally a card game designed by my younger brother. I decided to port the game in Unity using Mirror as the networking framework to have online multiplayer support up to 4 players.",
+    "The Programming Features I built out are the following: ",
+    "* Card Drag and Drop System with Horizontal Scrollbar enabled in the event a player has too many cards held in their hand",
+    "* Lobby where players can ready up and view the game rules and test out the controls while waiting",
+    "* Card Animations for drawing a card or when an opponent places a card on the face-up pile",
+    "* Server-Side logic for determining a player's turn, win conditions, and maintaining data about the current hand each player has",
+    "* Headless Server Build Support",
+    "* Single-Player Mode",
+    "The source code is available by clicking on the github icon above. The game client and server is currently supported on Windows and Mac standalone builds. If you want to try the game out, the game is embedded on this page where you can try out single player mode."
   ],
   "gameScreenshots": {
-    "mainImagePath": "images/projects/projectace/ProjectAceTitleScreen.PNG",
+    "mainImagePath": "",
     "images": [
-      "images/projects/starchaser/gameplay1.gif"
+      "images/projects/projectace/ProjectAceTitleScreen.PNG"
     ]
   },
   "optional": {
