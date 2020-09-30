@@ -17,9 +17,8 @@ export default function MainImage({imagePath}) {
                justify="center" 
                className={style.container}>
     <Card>
-      <CardMedia component="img"
-                image={imagePath}
-                />
+      {imagePath && 
+        <CardMedia component="img" image={imagePath} />}
     </Card>
   </Container>);
 }

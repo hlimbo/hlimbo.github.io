@@ -11,6 +11,8 @@ from 'react-router-dom';
 
 import ScrollToTop from './utils/ScrollToTop';
 const projectsList = require('./JsonData/projectsList.json');
+const jsonData = require(`./JsonData/projects/ProjectAce.json`);
+
 
 export default function App() {
   return (
@@ -31,7 +33,7 @@ export default function App() {
         }
         {/* Hard Code route for now but keep hidden from homepage*/}
         <Route exact sensitive path={`/ProjectAce`}>
-          <GameInfoPage projectInfoData={require(`./JsonData/projects/ProjectAce.json`)}/>
+          <GameInfoPage projectInfoData={jsonData}/>
         </Route>
       </Switch>
     </Router>

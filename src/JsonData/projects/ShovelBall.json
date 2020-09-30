@@ -1,12 +1,12 @@
 {
   "projectName": "Shovel Ball",
-  "githubLink": "https://github.com/hlimbo/MathNinja",
+  "githubLink": "https://github.com/tkwon09/Shovelball",
   "aboutGame": [
     "ShovelBall is a 2 player local game where you compete against another to score the most points in the opposing player's goal before time runs out. The game's physics was inspired by Super Smash Bros. and its gameplay may remind you of Rocket League.",
     "This was made during the Winter Quarter 2015 Game Jam at UCI for the Video Game Development Club (VGDC). This was my first game jame I participated in and was very excited yet unsure of how I would help develop the game alongside with my randomly selected group. Thankfully, I was grouped with an amazing programmer who helped show me the ropes on how to collaborate as a team. He introduced me to git version control, taught common coding practices in C# during game jams, and encouraged me to write scripts to respawn balls when they were hit towards the goal as well as the physics code for the ball movement. Overall, the game jam was a fun learning experience and I hope everyone who plays this game enjoys it as much as I did when I helped develop it."
   ],
   "gameScreenshots": {
-    "mainImagePath": "images/projects/shovelball/ShovelBallPreview3.PNG",
+    "mainImagePath": "",
     "images": [
       "images/projects/shovelball/ShovelBallPreview7.PNG",
       "images/projects/shovelball/ShovelBallPreview.gif",
