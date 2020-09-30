@@ -1,17 +1,20 @@
 {
   "projectName": "MathNinja",
   "githubLink": "https://github.com/hlimbo/MathNinja",
-  "aboutGame": ["MathNinja is an educational game catered towards elementary schoolers who have trouble memorizing their multiplication tables. I was inspired to create this game from my little brother who had trouble memorizing his multiplication tables. If you are tired of flipping through boring old flash cards in hopes of memorizing your multiplication tables, then this game is for you!"],
+  "aboutGame": [
+    "The game can be played by following the link below: ",
+    "https://hlimbo.github.io/Math-Ninja-Game",
+    "MathNinja is an educational game catered towards elementary schoolers who have trouble memorizing their multiplication tables. I was inspired to create this game from my little brother who had trouble memorizing his multiplication tables. If you are tired of flipping through boring old flash cards in hopes of memorizing your multiplication tables, then this game is for you!"
+  ],
   "gameScreenshots": {
-    "mainImagePath": "",
+    "mainImagePath": "images/projects/mathninja/MathNinjaPreview.PNG",
     "images": [
-      "images/projects/mathninja/MathNinjaPreview.PNG",
       "images/projects/mathninja/MathNinjaGameplay.gif",
       "images/projects/mathninja/MathNinjaGameplay2.gif"
     ]
   },
   "optional": {
-    "webGLPaths": {
+    "webGLPathsObsolete": {
       "buildReleaseJsonPath": "content/MathNinja_Release/Build/MathNinja_Release.json",
       "unityLoaderPath": "content/MathNinja_Release/Build/UnityLoader.js"
     },

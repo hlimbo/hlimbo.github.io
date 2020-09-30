@@ -11,14 +11,16 @@
     "Unfortunately, they had to leave on the last day of the event where I had to buckle up as the sole game programmer of the team to help guide my team to finish up developing the game and submitting it before the deadline struck. An unexpected struggle we came across were Unity's InputManager system's compatibility with PS4 controllers. The PS4 controllers weren't receiving proper input when the game launched and we only had a few hours left until the deadline. We had to decide to not use the PS4 controllers and instead used a second external keyboard as a controller for the game. This quick hack worked as a marvelous solution at the time as we were able to successfully demo our game using that setup."
   ],
   "gameScreenshots": {
-    "mainImagePath": "",
+    "mainImagePath": "images/projects/hydrohunters/HydroHuntersPreview2.gif",
     "images": [
       "images/projects/hydrohunters/HydroHuntersPreview.gif",
-      "images/projects/hydrohunters/HydroHuntersPreview2.gif"
+      "images/projects/hydrohunters/HydroHuntersPreview3.PNG",
+      "images/projects/hydrohunters/HydroHuntersPreview2.PNG",
+      "images/projects/hydrohunters/HydroHuntersPreview7.PNG"
     ]
   },
   "optional": {
-    "webGLPaths": {
+    "webGLPathsObsolete": {
       "buildReleaseJsonPath": "content/HydroHunters_Release/Build/HydroHunters_Release.json",
       "unityLoaderPath": "content/HydroHunters_Release/Build/UnityLoader.js"
     },
