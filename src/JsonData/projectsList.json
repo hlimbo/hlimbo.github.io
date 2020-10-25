@@ -1,5 +1,11 @@
 [
   {
+    "name": "ProjectAce",
+    "projectName": "Project Ace",
+    "projectDate": "Oct. 2020",
+    "imagePath": "images/projects/projectace/ProjectAceTitleScreen.PNG"
+  },
+  {
     "name": "StarChaser",
     "projectName": "StarChaser",
     "projectDate": "Dec. 2017",

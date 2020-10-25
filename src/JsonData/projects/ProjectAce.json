@@ -2,7 +2,6 @@
   "projectName": "Project Ace",
   "githubLink": "https://github.com/hlimbo/ProjectAce",
   "aboutGame": [
-    "Disclaimer: Page is still under construction!",
     "The game can be played by following the link below: ",
     "https://hlimbo.github.io/Project-Ace-Game",
     "Project Ace was originally a card game designed by my younger brother. I decided to port the game in Unity using Mirror as the networking framework to have online multiplayer support up to 4 players.",
@@ -17,7 +16,15 @@
   ],
   "gameScreenshots": {
     "mainImagePath": "images/projects/projectace/ProjectAceTitleScreen.PNG",
-    "images": []
+    "images": [
+      "images/projects/projectace/ProjectAcePlaceCard.gif",
+      "images/projects/projectace/ProjectAceLobby.PNG",
+      "images/projects/projectace/ProjectAceDrawCards.gif",
+      "images/projects/projectace/ProjectAceCardOpponent.gif",
+      "images/projects/projectace/ProjectAceWinScreen.PNG",
+      "images/projects/projectace/ProjectAceMultiPlatformSupport.PNG",
+      "images/projects/projectace/ProjectAceLinuxServerPreview.PNG"
+    ]
   },
   "optional": {
     "webGLPathsObsolete": {
@@ -30,7 +37,8 @@
       "https://freesound.org/people/f4ngy/",
       "kenney audio assets",
       "https://kenney.nl/assets/casino-audio",
-      "https://kenney.nl/assets/voiceover-pack"
+      "https://kenney.nl/assets/voiceover-pack",
+      "Special Thanks to my Sister for making the card art excluding the Joker and Face Down Cards"
     ]
   }
 }
