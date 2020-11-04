@@ -3,7 +3,7 @@
   "githubLink": "https://github.com/hlimbo/ProjectAce",
   "aboutGame": [
     "The game can be played by following the link below: ",
-    "https://hlimbo.github.io/Project-Ace-Game",
+    "https://hlimbo.itch.io/project-ace",
     "Project Ace was originally a card game designed by my younger brother. I decided to port the game in Unity using Mirror as the networking framework to have online multiplayer support up to 4 players.",
     "The Programming Features I built out are the following: ",
     "* Card Drag and Drop System with Horizontal Scrollbar enabled in the event a player has too many cards held in their hand",
