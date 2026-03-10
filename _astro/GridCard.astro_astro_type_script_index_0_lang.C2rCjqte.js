@@ -1,1 +1,0 @@
-import{s as e}from"./SoundManager.CpvTsnFF.js";function o(){const t=document.querySelectorAll(".grid-item");for(const n of t)n.addEventListener("click",()=>{e.play(e.BUTTON_PRESS4)})}document.addEventListener("astro:page-load",o);
